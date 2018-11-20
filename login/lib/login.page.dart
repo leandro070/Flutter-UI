@@ -87,7 +87,32 @@ class LoginPage extends StatelessWidget {
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(34.0)),
               padding: EdgeInsets.all(16),
-              onPressed: () {},
+              onPressed: () {
+                print('Login');
+              },
+            ),
+            SizedBox(
+              height: 15.0,
+              width: MediaQuery.of(context).size.width,
+            ),
+            Center(
+              child: InkWell(
+                child: RichText(
+                  text: TextSpan(children: [
+                    TextSpan(
+                        text: 'Don\'t you have account?',
+                        style: TextStyle(color: Colors.grey[700])),
+                    TextSpan(
+                        text: ' Sign Up',
+                        style: TextStyle(
+                            color: Colors.pink[400],
+                            fontWeight: FontWeight.w700))
+                  ]),
+                ),
+                onTap: () {
+                  print('Register');
+                },
+              ),
             )
           ],
         ),
